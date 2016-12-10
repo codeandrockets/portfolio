@@ -9,10 +9,11 @@ import './index.css';
 
 ReactDOM.render((
   <Router history={hashHistory}>
-  	<Route path="/" component={App}/>
-  	<Route path="/portfolio" component={Portfolio}/>
-  	<Route path="/about" component={About}/>
-  	<Route path="/contact" component={Contact}/>
+  	<Route path="/" component={App}>
+  		<Route path="/portfolio" component={Portfolio}/>
+  		<Route path="/about" component={About}/>
+  		<Route path="/contact" component={Contact}/>
+  	</Route>
   </Router>
   ), document.getElementById('root')
 );
