@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Header';
 import { Link } from 'react-router';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1>Code and Rockets</h1>
-        <h2>Front-End Web Development by Steven Jasionowicz</h2>
+      <div className="container">
+        <Header />
         <ul role="nav">
-          <li><Link to="/portfolio">Portfolio</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/portfolio" activeClassName="active">Portfolio</Link></li>
+          <li><Link to="/about" activeClassName="active">About</Link></li>
+          <li><Link to="/contact" activeClassName="active">Contact</Link></li>
         </ul>
 
         {this.props.children}
